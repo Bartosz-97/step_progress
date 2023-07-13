@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="static/style/style.css">
+  <title>Universitas Varsoviensis</title>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="aside">
+      <div class="sidebar">
+        <div class="point point__active">1</div>
+        <div class="sidebar__content">
+          <p>Step 1</p>
+          <h3>Your info</h3>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="point">2</div>
+        <div class="sidebar__content">
+          <p>Step 2</p>
+          <h3>Select plan</h3>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="point">3</div>
+        <div class="sidebar__content">
+          <p>Step 3</p>
+          <h3>Add-ons</h3>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="point">4</div>
+        <div class="sidebar__content">
+          <p>Step 4</p>
+          <h3>Summary</h3>
+        </div>
+      </div>
+    </aside>
+  <!--Step 1 start-->
+    <div class="step-1 stp">
+      <header>
+        <h1>Personal info</h1>
+        <p class="subtitle">
+          Please provide your name, email address, and phone number.
+        </p>
+      </header>
+      <form>
+        <div class="label__content">
+          <label for="name">Name</label>
+          <p class="error">This field is required</p>
+          <input type="text" id="name" placeholder="e.g. Stephen King" required>
+        </div>
+
+        <div class="label__content">
+          <label for="email">Email Address</label>
+          <p class="error">This field is required</p>
+          <input type="text" id="email" placeholder="e.g. StephenKing@lorem.com" required>
+        </div>
+
+        <div class="label__content">
+          <label for="number">Phone Number</label>
+          <p class="error">This field is required</p>
+          <input type="text" id="number" placeholder="e.g. +12 234 567 890" required>
+        </div>
+      </form>
+
+      <div class="buttons">
+        <button class="btn next_btn">Next Step</button>
+      </div>
+
+    </div>
+  <!--Step 1 end-->
+  <!--Step 2 start-->
+    <div class="step-2 stp">
+      <header>
+        <h1>Select your plan</h1>
+        <p class="subtitle">
+          You have the option of motnhlu or yearly billing
+        </p>
+      </header>
+      <div class="cards">
+        <div class="card card--selected">
+          <img src="assets/images/icon-arcade.svg">
+          <div class="card__content">
+            <h3 class="card__heading">Arcade</h3>
+            <p class="card__price">$9/mo</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/images/icon-advanced.svg">
+          <div class="card__content">
+            <h3 class="card__heading">Advanced</h3>
+            <p class="card__price">$12/mo</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/images/icon-pro.svg">
+          <div class="card__content">
+            <h3 class="card__heading">Pro</h3>
+            <p class="card__price">$15/mo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="switcher">
+        <p class="monthly sw-active">Monthly</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <p class="yearly">Yearly</p>
+      </div>
+
+      <div class="buttons">
+        <button class="btn prev__btn">Go Back</button>
+        <button class="btn next_btn">Next Step</button>
+      </div>
+    </div>
+  <!--Step 2 end-->
+  <!--Step 3 start-->
+      <div class="step-3 stp">
+        <header>
+          <h1>Pick add-ons</h1>
+          <p class="subtitle">
+            Add-ons help enhance your aming experience
+          </p>
+        </header>
+
+        <div class="options">
+          <div class="option" data-id="1">
+            <input type="checkbox" id="online">
+            <div class="option__content">
+              <label for="online">Online service</label>
+              <p class="subtitle">
+                Access to multiplayer games
+              </p>
+            </div>
+            <p class="option__price">+$1/mo</p>
+          </div>
+
+          <div class="option" data-id="2">
+            <input type="checkbox" id="larger">
+            <div class="option__content">
+              <label for="larger">Larger storage</label>
+              <p class="subtitle">
+                Extra 1TB of cloud save
+              </p>
+            </div>
+            <p class="option__price">+$2/mo</p>
+          </div>
+
+          <div class="option" data-id="3">
+            <input type="checkbox">
+            <div class="option__content" id="custom">
+              <label for="custom">Customizable Profile</label>
+              <p class="subtitle">
+                Custom theme on your profile
+              </p>
+            </div>
+            <p class="option__price">+$2/mo</p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="btn prev__btn">Go Back</button>
+          <button class="btn next_btn">Next Step</button>
+        </div>
+      </div>
+  <!--Step 3 end-->
+  <!--Step 4 start-->
+    <div class="step-4 stp">
+      <header>
+        <h1>Finishing up</h1>
+        <p class="subtitle">
+          Double-check everything looks OK before confirming.
+        </p>
+      </header>
+      <div class="selection__box">
+        <div class="selection__container">
+          <div class="selected__plan">
+            <h3 class="plan__name">Arcade(Monthly)</h3>
+            <p class="option__priced">$9/mo</p>
+          </div>
+          <hr>
+          <div class="addons">
+            <template>
+              <div class="selected__addon">
+                <span class="service__name">Online service</span>
+                <span class="service__price">+1/mo</span>
+              </div>
+            </template>
+          </div>
+        </div>
+        <p class="total">Total (per month) <b>+12/mo</b></p>
+      </div>
+
+      <div class="buttons">
+        <button class="btn prev__btn">Go Back</button>
+        <button class="btn confirm__btn">Confirm</button>
+      </div>
+    </div>
+    <!--Step 4 end-->
+    <!--Step 5 start-->
+    <div class="step-5 stp">
+      <img src="assets/images/icon-thank-you.svg">
+      <header>
+        <h1>Thank you!</h1>
+      </header>
+    </div>
+    <!--Step 5 end-->
+
+  </div>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
+
